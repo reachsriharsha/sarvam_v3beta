@@ -7,19 +7,19 @@ This document lists test cases for the Sarvam AI Text-to-Speech (TTS) model, bas
 ## 1. Emotion-Based Testing
 
 ### Test: Happy/Enthusiastic (English)
-| Input Text                        | Input Language | Output Language | Output WAV File | Expected Emotion | Perceived Emotion | Comments |
-|-----------------------------------|---------------|----------------|-----------------|------------------|-------------------|----------|
-| Hello, how may I assist you today?| English       | English        |                 | Happy            |                   |          |
+| Input Text                        | Input Language | Output Language | Output WAV File | Expected Emotion | Perceived Emotion | Comments | Speaker|
+|-----------------------------------|---------------|----------------|-----------------|------------------|-------------------|----------|----------|
+| Hello, how may I assist you today?| English       | English        |t001_EN2EN_op.wav| Happy            |                   | At the end of voice, 'how ma' is coming, this is not expected          |  sakshi        |
 
 ### Test: Apologetic/Regretful (Hindi)
-| Input Text                              | Input Language | Output Language | Output WAV File | Expected Emotion | Perceived Emotion | Comments |
-|-----------------------------------------|---------------|----------------|-----------------|------------------|-------------------|----------|
-| कृपया 5 मिनट प्रतीक्षा करें।           | Hindi         | Hindi          |                 | Apologetic       |                   |          |
+| Input Text                              | Input Language | Output Language | Output WAV File | Expected Emotion | Perceived Emotion | Comments | Speaker|
+|-----------------------------------------|---------------|----------------|-----------------|------------------|-------------------|----------|----------|
+| कृपया 5 मिनट प्रतीक्षा करें।                   | Hindi         | Hindi          |                 | Apologetic       |                   |   target_language_code="en-IN", still hindi properly identified.        |  sakshi        |
 
 ### Test: Calm/Soothing (Kannada)
 | Input Text                                 | Input Language | Output Language | Output WAV File | Expected Emotion | Perceived Emotion | Comments |
 |--------------------------------------------|---------------|----------------|-----------------|------------------|-------------------|----------|
-| ದಯವಿಟ್ಟು ೫ ನಿಮಿಷ ಕಾಯಿರಿ.                  | Kannada       | Kannada        |                 | Calm             |                   |          |
+| ದಯವಿಟ್ಟು ೫ ನಿಮಿಷ ಕಾಯಿರಿ.                  | Kannada       | Kannada        |     t001_KN2KN_op.wav \n t001_KN2KN_op_with_language_kn.wav           | Calm             |                   |     when lanugage is set to english and all the text is given in kannada, number is spoken in english.t001_KN2KN_op.wav But when language is correctly mentioned kannda number came in kannada as well.      |sakshi        |
 
 ### Test: Neutral/Professional (English)
 | Input Text | Input Language | Output Language | Output WAV File | Expected Emotion | Perceived Emotion | Comments |
